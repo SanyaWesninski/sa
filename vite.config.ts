@@ -8,4 +8,17 @@ export default defineConfig({
   build: { target: 'es2022' },
 
   plugins: [vue(), svgLoader()],
+
+  css: {
+    preprocessorOptions: {
+      scss: {
+        loadPaths: ['src/styles'],
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': '/src', 
+    },
+  }
 });
